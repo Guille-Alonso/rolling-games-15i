@@ -11,7 +11,7 @@
 body{
     margin: 0;
     padding: 0;
-    background: url(./assets/Login/mario.png) no-repeat;
+    background: url(../assets/Login/mario.png) no-repeat;
     height: 100vh;
     font-family: sans-serif;
     background-size: cover;
@@ -34,7 +34,7 @@ main{
     transform: translate(-50%,-50%);
     width: 350px;
     min-height: 200px;
-    background: url(./assets/Login/mario.png);
+    background: url(../assets/Login/mario.png);
     border-radius: 10px;
     padding: 40px;
     box-sizing: border-box;
@@ -228,10 +228,10 @@ main{
 
 
 body.dark-theme{
-    background-image: url(./assets/Login/dark-soldier.png);
+    background-image: url(../assets/Login/dark-soldier.png);
 }
 .dark-theme .loginBox{
-    background: url(./assets/Login/dark-soldier.png);
+    background: url(../assets/Login/dark-soldier.png);
 
 }
 .dark-theme #toggle{
@@ -245,7 +245,7 @@ body.dark-theme{
 }
 
 .dark-theme #modal-pass{
-    background-image: url(./assets/Login/dark-soldier.png);
+    background-image: url(../assets/Login/dark-soldier.png);
 }
 
 
@@ -305,5 +305,5 @@ body.dark-theme{
 }
 
 #modal-pass{
-    background-image: url(./assets/Login/mario.png);
+    background-image: url(../assets/Login/mario.png);
 }
