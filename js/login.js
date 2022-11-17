@@ -55,7 +55,7 @@ console.log(users);
     container.appendChild(alertMessage);
     setTimeout(()=>{
     alertMessage.remove()
-    },700)
+    },600)
 }
 
 
