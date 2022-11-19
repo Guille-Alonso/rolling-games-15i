@@ -1,4 +1,6 @@
-
+*{
+    font-family: 'Stick No Bills', sans-serif;
+}
 
 ::selection{
     background-color: #fdcf74;
@@ -167,6 +169,11 @@ main{
     text-align: center;
     color: #fff;
     margin: 30px 0;
+}
+
+
+#button-change{
+    margin-top: 10px;
 }
 
 #btn-sing{
