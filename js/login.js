@@ -18,7 +18,7 @@ if (localStorage.getItem('users')){
 users = [
         new User (1,'Florencia Gomez', 25,'FlorG15i@gmail.com', '123456',true),
         new User(2,'Stella',25,'stella@gmail.com','12345678',true),
-        new User(3,'Guille',25,'guilleplate@gmail.com','123456',true),
+        new User(3,'Guille',25,'guilleplate@gmail.com','123456',false),
         new User(4,'Nicolas Pereira',26,'nico@gmail.com','123456',true),
         new User(5,'Favio',25,'fav10@gmail.com','123456',true),
         new User (6,'Rosario', 25,'Rolli@gmail.com', '123456',true),
@@ -37,6 +37,9 @@ console.log(users);
         const isOk = userFound.password===password
     if(isOk){
         alert('entro');
+    localStorage.setItem('userInfo',JSON.stringify(userFound));
+    console.log(userFound);
+    window.location.assign(window.location.origin +'/html/admin.html');
     }else{
         alertMessage('contraseña erronea','form')
     }
