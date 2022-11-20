@@ -6,6 +6,9 @@
     background-color: #fdcf74;
 }
 
+
+/*Login*/
+
 body{
     margin: 0;
     padding: 0;
@@ -196,6 +199,7 @@ main{
     width: 150%;
 }
 
+/*Login*/
 
 
 /* MODAL EMAIL */
@@ -328,32 +332,30 @@ body.dark-theme{
     background-image: url(../assets/Login/soldier-light.webp);
 }
 
+/* MODAL INCORRECTO */
 
 
 
-
-@media (min-width: 912px){
+/* @media (min-width: 912px){
 
     body{
         height: 100rem;
     }
 
 
+} */
+
+
+/* Footer */
+
+
+#padreFooter{
+    height: 100vh;
+    margin-top: 200px;
 }
-
-@media (min-width: 913px){
-
-    body{
-        height: 70rem;
-    }
-
-
-}
-
 .footer {
     position:absolute;
     width: 100%;
-    height: 20vh;
     background: #000000;
     min-height: 100px;
     padding: 5 0;
@@ -362,12 +364,10 @@ body.dark-theme{
     align-items: center;
     flex-direction: column;
     bottom: 0;
-    margin-top: auto;
 }
 
-
-.social-icon,
-.menu {
+    .social-icon,
+    .menu {
     position: relative;
     display: flex;
     justify-content: center;
@@ -377,25 +377,25 @@ body.dark-theme{
     padding-top: 10px;
     
 }
-  
-  .social-icon__item,
-  .menu__item {
+
+    .social-icon__item,
+    .menu__item {
     list-style: none;
-  }
-  
-  .social-icon__link {
+}
+
+    .social-icon__link {
     font-size: 1rem;
     color: #fff;
     margin: 0 10px;
     display: inline-block;
     transition: 0.5s;
     
-  }
-  .social-icon__link:hover {
+}
+    .social-icon__link:hover {
     transform: translateY(-10px);
-  }
-  
-  .menu__link {
+}
+
+    .menu__link {
     font-size: 10;
     color: rgb(160, 0, 88);
     margin: 0 10px;
@@ -404,17 +404,27 @@ body.dark-theme{
     text-decoration: none;
     opacity: 0.75;
     font-weight: 500;
-  }
-  
-  .menu__link:hover {
+}
+
+    .menu__link:hover {
     opacity: 1;
-  }
-  
-  .footer p {
+}
+
+    .footer p {
     color: #ffffff;
     margin: 10px 0 10px 0;
     font-size: 1rem;
     font-weight: 300;
-  }
-  
+}
+    @media(max-width: 280px) {
+    .footer p {
+    color: #ffffff;
+    margin: 10px 0 10px 0;
+    font-size: 1rem;
+    font-weight: 300;
+    text-align: center;
+}
+}
 
+
+/* Footer */
