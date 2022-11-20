@@ -2,65 +2,74 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-body main{
-  color: #000000;
-  background-color: #000000;
-
-}
-
-#body-error404{
-  background-color: #000000;
-  height: 100%;
-  width: 100%;
+    font-family: 'Stick No Bills', sans-serif;
 }
 
 
+body{
+  padding: 0;
+  margin: 0;
 
-
-/* Agora definimos as característica do título */
-#error-404-h1 {
-  padding-top:100px;
-  font-size: 60px;
-  color:#fff;
+  background-image: linear-gradient(to right top,#02010A, #04052E, #140152, #22007C, #0D00A4, #18294a, #1d3357, #223e65);
 }
 
-/* Agora definimos as característica do parágrafo. */
-#error-404-p {
-  font-size: 20px;
-  color:#fff;
-  white-space: nowrap;
-  border-right: solid 3px #fff;
-  overflow: hidden; 
+.crash img{
+  width: 150px;
+  position: absolute;
+  left: 15%;
+  top: 55%;
 }
 
-/* Animação, sua velocidade... */
-#error-404-p {
-  animation: animated-text 4s steps(25) 1s 1 normal both, animated-cursor 600ms steps(25) infinite; 
+.kirbi img {
+  width: 150px;
+  position: absolute;
+  animation: animationFlyings 8s infinite linear;
+  top: 55%;
+  right: 15%;
+
+}
+.notify{
+  color: #fff; 
+  text-align: center;
+  margin-top: 120px;
+}
+.notify h3{
+  font-size: 110px;
+  margin: 30px 0;
+}
+.notify p{
+  font-size: 18px;
 }
 
-/* Animação do Parágrafo */
-
-@keyframes animated-text{
-  from{width: 0;}
-  to{width: 340px;}
+.notify button{
+  padding: 10px 30px;
+  border: 0;
+  background: #880000;
+  font-size: 18px;
+  border-radius: 5px;
+  color: white; 
+  outline:none;
+}
+.notify button:hover{
+  cursor: pointer;
+  background: #660000;
 }
 
-/* cursor animations */
 
-@keyframes animated-cursor{
-  from{border-right-color: #fff;}
-  to{border-right-color: transparent;}
+
+
+
+
+.forget-modal{
+  width: 400px;
 }
-
-
-
 
 #modal-error{
   width: 500px;
-  height: 500px;
+  height: 400px;
 }
+
+
 
 
 
