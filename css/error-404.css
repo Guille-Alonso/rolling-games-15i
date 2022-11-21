@@ -9,7 +9,6 @@
 body{
   padding: 0;
   margin: 0;
-
   background-image: linear-gradient(to right top,#02010A, #04052E, #140152, #22007C, #0D00A4, #18294a, #1d3357, #223e65);
 }
 
@@ -20,14 +19,16 @@ body{
   top: 55%;
 }
 
-.kirbi img {
+.monkey img {
   width: 150px;
   position: absolute;
   animation: animationFlyings 8s infinite linear;
-  top: 55%;
-  right: 15%;
+  top: 60%;
+  right: 10%;
 
 }
+
+
 .notify{
   color: #fff; 
   text-align: center;
@@ -65,8 +66,13 @@ body{
 }
 
 #modal-error{
-  width: 500px;
-  height: 400px;
+  width: 300px;
+  height: 500px;
+}
+
+.modal-header{
+  width: 300px;
+  height: 500px;
 }
 
 
