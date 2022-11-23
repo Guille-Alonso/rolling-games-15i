@@ -39,7 +39,7 @@ console.log(users);
         alert('entro');
     localStorage.setItem('userInfo',JSON.stringify(userFound));
     console.log(userFound);
-    window.location.assign(window.location.origin +'/html/admin.html');
+    window.location.assign(window.location.origin +'/html/main.html');
     }else{
         alertMessage('contraseña erronea','form')
     }

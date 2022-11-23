@@ -1,9 +1,9 @@
 //? PROTECCIÓN DE RUTA
 const userLogged = JSON.parse(localStorage.getItem('userInfo'));
 if(!userLogged){
-  window.location.assign(window.location.origin + '/login.html')
+  window.location.assign(window.location.origin + '/html/login.html')
 }else if(!userLogged.admin){
-  window.location.assign(window.location.origin)
+  window.location.assign(window.location.origin+ '/html/main.html')
 }
 
 class Game{
@@ -31,7 +31,7 @@ if(JSON.parse(localStorage.getItem('games'))){
 });
 }
 
-//! Adaptamos footer a la dinámica (ver la forma de encontrar el ancho del disp para el if)
+//! Adaptamos footer a la dinámica
 const body = document.querySelector('body')
 const footer = document.querySelector('footer')
 if(games.length < 2){
@@ -226,4 +226,8 @@ const alertMessage = (message,queryContainer)=>{
   setTimeout(()=>{
     alertMessage.remove()
   },1000)
+}
+
+function logout(){
+  localStorage.removeItem('userInfo')
 }
