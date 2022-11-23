@@ -15,7 +15,14 @@ font-family: 'Stick No Bills', sans-serif;
 text-align: center;
 }
 
-
+.imgFav{
+  height: 400px;
+  width: 800px;
+}
+.imgCat{
+  height: 300px;
+  /* width: 800px; */
+}
 .card-categorie {
   background: transparent;
   border: 2px solid red;
@@ -31,4 +38,10 @@ text-align: center;
 .card-categorie:hover {
   color: red;
   box-shadow: 2px 2px 15px red inset;
+}
+
+@media(max-width: 900px) {
+ .principal{
+  margin-top: 15%;
+ }
 }
