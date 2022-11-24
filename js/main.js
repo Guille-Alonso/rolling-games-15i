@@ -22,8 +22,8 @@ games.forEach(game=>{
                 </div>
                 <div class="col-md-8">
                   <div class="card-body">
-                    <h5 class="card-title" style="color: white;">${game.name}</h5>
-                    <p class="card-text" style="color: white;">
+                    <h5 class="card-title">${game.name}</h5>
+                    <p class="card-text">
                    ${game.description}
                     </p>
                     <p class="card-text">
@@ -94,7 +94,9 @@ categories.forEach(cat=>{
         gameCard.classList.add("mx-1")
         gameCard.setAttribute('style','width: 18rem;')
         gameCard.innerHTML=`
+        <a onclick="irDetalle(${game.code})">
         <img src=${game.image} class="card-img-top imgCat" alt="..." />
+        </a>
         <div class="card-body">
           <h5 class="card-title">${game.name}</h5>
         </div>
@@ -112,7 +114,9 @@ categories.forEach(cat=>{
         gameCard.classList.add("mx-1")
         gameCard.setAttribute('style','width: 18rem;')
         gameCard.innerHTML=`
+        <a onclick="irDetalle(${game.code})">
         <img src=${game.image} class="card-img-top imgCat" alt="..." />
+        </a>
         <div class="card-body">
           <h5 class="card-title">${game.name}</h5>
         </div>
@@ -130,7 +134,9 @@ categories.forEach(cat=>{
         gameCard.classList.add("mx-1")
         gameCard.setAttribute('style','width: 18rem;')
         gameCard.innerHTML=`
+        <a onclick="irDetalle(${game.code})">
         <img src=${game.image} class="card-img-top imgCat" alt="..." />
+        </a>
         <div class="card-body">
           <h5 class="card-title">${game.name}</h5>
         </div>
@@ -148,4 +154,8 @@ categories.forEach(cat=>{
       if(userLogged.admin){
         window.location.assign(window.location.origin+ '/html/admin.html')
       }
+    }
+
+   function irDetalle(code){
+    window.location.assign(window.location.origin+ `/html/details.html#${code}`)
     }
