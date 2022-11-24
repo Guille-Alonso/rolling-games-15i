@@ -2,8 +2,14 @@ body{
     margin: 0;
     padding: 0;
     height: 100%;
-    position: relative;
-}
+    /* position: relative; */
+    display:grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 100%;
+    min-height: 100vh;
+     
+  }
+
 .h1{
     font-family: 'Stick No Bills', sans-serif;
   }
@@ -181,10 +187,10 @@ body{
 
 /* FOOTER */
 #padreFooter{
-    height: 100vh;
+    height: 1vh;
 }
 .footer {
-    position:absolute;
+    position:relative;
     width: 100%;
     background: #000000;
     min-height: 100px;
