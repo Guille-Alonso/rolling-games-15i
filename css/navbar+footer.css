@@ -190,7 +190,7 @@ body{
     height: 1vh;
 }
 .footer {
-    position:absolute;
+    position:relative;
     width: 100%;
     background: #000000;
     min-height: 100px;
