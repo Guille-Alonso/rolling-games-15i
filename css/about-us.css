@@ -96,3 +96,68 @@ ul {
     height: 60px;
     border-radius: 50%;
 }
+
+
+
+#pick-nico{
+    width: 250px;
+    height: 250px;
+    border-radius: 100%;
+}
+
+#pick-nico:hover{
+    border: 2px solid cyan;
+}
+
+
+#Roro-pittaro{
+    width: 40%;
+    height: 40%;
+}
+
+#Roro-pittaro:hover{
+    border: 2px solid palevioletred;
+}
+
+#Guille-Alonso{
+    width: 250px;
+    height: 250px;
+    border-radius: 100%;
+}
+
+#Guille-Alonso:hover{
+    border: 2px solid yellow;
+}
+
+#Florencia-gomez{
+    width: 30%;
+    height: 30%;
+}
+
+#Florencia-gomez:hover{
+    border: 2px solid cyan;
+}
+
+
+#Stella{
+    width: 250px;
+    height: 250px;
+    border-radius: 100%;
+}
+
+#Stella:hover{
+    border: 2px solid green;
+}
+
+.pick-team{
+    color: #fff;
+}
+
+.pick-team:hover{
+    color:orange;
+}
+
+.salto{
+    width: 100%;
+    border: 3px solid cyan;
+}
