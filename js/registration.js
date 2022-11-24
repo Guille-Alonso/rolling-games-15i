@@ -1,14 +1,16 @@
 class User{
-    constructor( newId, UserNameRegistration1, EmailRegistration1, PasswordRegistration1, RepeatPasswordRegistration1, AcceptanceRegistration1, admin){
-        this.newId = newId
-        this.UserNameRegistration1=UserNameRegistration1
-        this.EmailRegistration1=EmailRegistration1
-        this.PasswordRegistration1=PasswordRegistration1
-        this.RepeatPasswordRegistration1=RepeatPasswordRegistration1
+    constructor( Id, name, email, password, Repeatpassword, AcceptanceRegistration1, admin){
+        this.Id = Id
+        this.name=name
+        this.email=email
+        this.password=password
+        this.Repeatpassword=Repeatpassword
         this.AcceptanceRegistration1=AcceptanceRegistration1
         this.admin = admin
     }
 }
+
+
 let users;
 if(localStorage.getItem('users')){
     users=JSON.parse(localStorage.getItem('users'))
@@ -21,15 +23,15 @@ if(localStorage.getItem('users')){
 
 const registration = (e) => {
     e.preventDefault();
-    const UserNameRegistration1 = document.getElementById('UserNameRegistration').value;
-    const EmailRegistration1 = document.getElementById('EmailRegistration').value;
-    const PasswordRegistration1 = document.getElementById('PasswordRegistration').value;
-    const RepeatPasswordRegistration1 = document.getElementById('RepeatPasswordRegistration').value;
+    const name = document.getElementById('UserNameRegistration').value;
+    const email = document.getElementById('EmailRegistration').value;
+    const password = document.getElementById('PasswordRegistration').value;
+    const Repeatpassword = document.getElementById('RepeatPasswordRegistration').value;
     const AcceptanceRegistration1 = document.getElementById('AcceptanceRegistration').value;
 
-    const newId = new Date().getTime();
-    const newUser = new User (newId, UserNameRegistration1, EmailRegistration1, PasswordRegistration1);
-    if (validateFieldsRegister(UserNameRegistration1, EmailRegistration1, PasswordRegistration1, RepeatPasswordRegistration1)){
+    const Id = new Date().getTime();
+    const newUser = new User (Id, name, email, password,password,true,true);
+    if (validateFieldsRegister(name, email, password, Repeatpassword)){
         const usersLS = JSON.parse(localStorage.getItem('users'));
         usersLS.push(newUser);
         localStorage.setItem('users', JSON.stringify(usersLS));
@@ -39,16 +41,16 @@ const registration = (e) => {
         // window.location.assign(window.location.origin + '/index.html');
     }
     else{
-        console.log(validateFieldsRegister(UserNameRegistration1, EmailRegistration1, PasswordRegistration1, RepeatPasswordRegistration1))
+        console.log(validateFieldsRegister(name, email, password, Repeatpassword))
         alertMessage('El Formato ingresado es inválido', 'form'); //se puede hacer varios if y que muestre el msj para cada campo mal ingresado.
         alert("no registrado");
     }
 }
-const validateFieldsRegister = (UserNameRegistration1, EmailRegistration1, PasswordRegistration1, RepeatPasswordRegistration1) => {
-    const UserNameRegistration1Ok = /^[a-zA-Z0-9]*$/.test(UserNameRegistration1);
-    const EmailRegistration1Ok = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(EmailRegistration1);
-    const PasswordRegistration1Ok = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/.test(PasswordRegistration1) && PasswordRegistration1 == RepeatPasswordRegistration1; //Mínimo ocho caracteres, al menos una letra y un número
-    if(UserNameRegistration1Ok && EmailRegistration1Ok && PasswordRegistration1Ok) return true 
+const validateFieldsRegister = (name, email, password, Repeatpassword) => {
+    const nameOk = /^[a-zA-Z0-9]*$/.test(name);
+    const emailOk = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
+    const passwordOk = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/.test(password) && password == Repeatpassword; //Mínimo ocho caracteres, al menos una letra y un número
+    if(nameOk && emailOk && passwordOk) return true 
     else return false
 
 }

@@ -15,8 +15,18 @@ text-transform: uppercase;
   .card-title{
 font-family: 'Stick No Bills', sans-serif;
 text-align: center;
+text-transform: uppercase;
 }
-
+small{
+ position: absolute;
+bottom: 10px;
+}
+.card-text{
+  font-family: 'Stick No Bills', sans-serif;
+  text-align: start;
+  margin-top: 30px;
+  }
+  
 .imgFav{
   height: 400px;
   width: 800px;
@@ -46,4 +56,19 @@ text-align: center;
  .principal{
   margin-top: 15%;
  }
+}
+
+@media(min-width: 280px){
+  .imgCat{
+    height: 130px;
+  }
+}
+@media(min-width: 900px){
+  .imgCat{
+    height: 300px;
+  }
+}
+
+#padreFooter{
+  height: 30vh !important;
 }

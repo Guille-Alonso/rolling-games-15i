@@ -21,7 +21,7 @@ h1{
     text-transform: uppercase;
 }
 .btnUbic{
-    height: 60px;
+    height: 40px;
     width: 120px;
 }
 @media(max-width: 900px) {

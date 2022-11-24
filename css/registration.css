@@ -11,13 +11,15 @@ body{
     background-size: cover;
     background-position: center;
     background-size:auto;
-    width: 100vw;
-    height: 100vh;
+  
 }
-main{
+/* main{
     width: 100%;
     height: 93%;
     margin-bottom: 30px;
+} */
+.imgUbic{
+    margin-top: 90px;
 }
 img{
     border-radius: 50%;
@@ -43,18 +45,18 @@ img{
     color: white;
 }
 
-a:link{
+#irLogin{
     color: white;
     display: flex;
     flex-direction: column;
     text-align: center;
 }
-a:visited{
+/* a:visited{
     color: #0D00A4;
     display: flex;
     flex-direction: column;
     text-align: center;
-}
+} */
 Button{
     /* position: absolute; */
     border: none;
@@ -93,5 +95,5 @@ Button:hover::before{
     filter: blur(20px);
 }
 #padreFooter{
-    height: 0vh;
+    height: 25vh;
 }

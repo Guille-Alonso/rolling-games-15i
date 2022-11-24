@@ -20,7 +20,7 @@ gameDetail.innerHTML= `
     <h2 class="text-light">${game.category}</h2>
       <h4 class="text-light">${game.description}</h4>
 
-    <button class="btn btn-dark my-2 btnUbic">Add To Cart</button>
+    <a href="error-404.html"><button class="btn btn-dark my-2 btnUbic">BUY NOW</button></a>
 </div>
 `
 

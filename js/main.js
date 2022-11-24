@@ -22,10 +22,10 @@ games.forEach(game=>{
                 </div>
                 <div class="col-md-8">
                   <div class="card-body">
-                    <h5 class="card-title">${game.name}</h5>
-                    <p class="card-text">
+                    <h1 class="card-title">${game.name}</h1>
+                    <h2 class="card-text">
                    ${game.description}
-                    </p>
+                    </h2>
                     <p class="card-text">
                       <small class="text-muted">Last updated 3 mins ago</small>
                     </p>
@@ -46,7 +46,7 @@ categories.forEach(cat=>{
     catGameRow.innerHTML= `
     <h1 class="title-categorie text-center my-5" style="color: red;">${cat.name}</h1>
     <div class="col">
-        <div id="carousel1" class="carousel slide" data-bs-ride="carousel">
+        <div id="carousel${cat.id}" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
              <div class="carousel-item active">
                 <div class="cards-wrapper">
@@ -70,11 +70,11 @@ categories.forEach(cat=>{
                 </div>
             </div>
             </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carousel1" data-bs-slide="prev">
+    <button class="carousel-control-prev" type="button" data-bs-target="#carousel${cat.id}" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Previous</span>
   </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carousel1" data-bs-slide="next">
+  <button class="carousel-control-next" type="button" data-bs-target="#carousel${cat.id}" data-bs-slide="next">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Next</span>
   </button>
@@ -159,3 +159,14 @@ categories.forEach(cat=>{
    function irDetalle(code){
     window.location.assign(window.location.origin+ `/html/details.html#${code}`)
     }
+
+  function esAdmin(){
+    if(!userLogged.admin){
+      const linkAdmin = document.querySelector('.adminLink')
+      linkAdmin.setAttribute('hidden','false')
+      console.log(linkAdmin);
+    }
+   
+  }
+  esAdmin();
+  
