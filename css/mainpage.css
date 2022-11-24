@@ -1,4 +1,4 @@
-*{
+body{
   background-color: #140152;
 }
 
@@ -8,7 +8,9 @@
   margin-top: 8%;
 }
 
-.title-categorie{font-family: 'Stick No Bills', sans-serif;}
+.title-categorie{font-family: 'Stick No Bills', sans-serif;
+text-transform: uppercase;
+}
   
   .card-title{
 font-family: 'Stick No Bills', sans-serif;
