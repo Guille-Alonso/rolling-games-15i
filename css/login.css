@@ -12,7 +12,7 @@
 body{
     margin: 0;
     padding: 0;
-    background: url(../assets/Login/soldier-light.webp) no-repeat;
+    background: url(../assets/Login/fondo-join.jpeg) no-repeat;
     height: 70rem;
     font-family: sans-serif;
     background-size: cover;
@@ -329,7 +329,7 @@ body.dark-theme{
 }
 
 #modal-pass{
-    background-image: url(../assets/Login/soldier-light.webp);
+    background-image: url(../assets/Login/fondo-join.jpeg);
 }
 
 /* MODAL INCORRECTO */
