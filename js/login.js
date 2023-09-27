@@ -36,7 +36,6 @@ console.log(users);
     if(userFound){
         const isOk = userFound.password===password
     if(isOk){
-        alert('entro');
     localStorage.setItem('userInfo',JSON.stringify(userFound));
     console.log(userFound);
     window.location.assign(window.location.origin +'/html/main.html');

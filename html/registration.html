@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registration Page</title>
+    <title>Rolling Games</title>
+    <link rel="shortcut icon" href="https://static.wixstatic.com/media/e7074c_9d647c924f09468fb64e0fea6cb5f3a6~mv2.png/v1/crop/x_81,y_0,w_1364,h_1500/fill/w_640,h_704,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/GAMERS-ISLAND-LOGO-cH.png" type="image/x-icon">
 
     <!-- Cinzel -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -63,9 +64,7 @@
                 <li class="navbar-item active">
                 <a href="login.html" id="item" class="nav-link active"> LOGIN </a>
                 </li>
-                <li class="navbar-item active">
-                <a href="registration.html" id="item" class="nav-link active"> SIGN UP </a>
-                </li>
+               
                 <li class="navbar-item active">
                 <a href="contact.html" id="item" class="nav-link active"> CONTACT </a>
                 </li>
@@ -79,6 +78,7 @@
             </div>
         </nav>
     </div>
+   
     <main class="container d-flex flex-column justify-content-center align-items-center">
         <img src="../assets/registration/logo.png" alt="logo-strong-games" width="150px" class="mb-2 imgUbic">
         <form onsubmit="registration(event);">
@@ -100,10 +100,10 @@
                     <input type="password" class="form-control" id="RepeatPasswordRegistration" placeholder="Password" required maxlength="10" minlength="8">
                     <label for="RepeatPasswordRegistration">Repeat Password</label>
                 </div>
-                <div class="form-check">
+                <!-- <div class="form-check">
                     <input class="form-check-input" type="checkbox" value="" id="AcceptanceRegistration">
                     <label class="form-check-label" for="AcceptanceRegistration" id="labelRegistration"> I agree with terms and conditions </label>
-                </div>
+                </div> -->
                 <button type="submit" class="btn btn-primary mb-2 container RegisterButton">REGISTER</button>  
                 <a id="irLogin" href="login.html">Login with my account</a>
             </div>

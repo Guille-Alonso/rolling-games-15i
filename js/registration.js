@@ -27,7 +27,6 @@ const registration = (e) => {
     const email = document.getElementById('EmailRegistration').value;
     const password = document.getElementById('PasswordRegistration').value;
     const Repeatpassword = document.getElementById('RepeatPasswordRegistration').value;
-    const AcceptanceRegistration1 = document.getElementById('AcceptanceRegistration').value;
 
     const Id = new Date().getTime();
     const newUser = new User (Id, name, email, password,password,true,true);
@@ -35,17 +34,29 @@ const registration = (e) => {
         const usersLS = JSON.parse(localStorage.getItem('users'));
         usersLS.push(newUser);
         localStorage.setItem('users', JSON.stringify(usersLS));
-        alertMessage('usuario registrado', 'form'); 
-        alert("registrado");
-        enviarMail();
-        // window.location.assign(window.location.origin + '/index.html');
+        alertMessage('Usuario Registrado con éxito', 'form'); 
+        // enviarMail();
+        limpiarcampos()
+        setTimeout(()=>{
+
+            window.location.assign(window.location.origin + '/html/login.html');
+        },5000)
     }
     else{
         console.log(validateFieldsRegister(name, email, password, Repeatpassword))
-        alertMessage('El Formato ingresado es inválido', 'form'); //se puede hacer varios if y que muestre el msj para cada campo mal ingresado.
-        alert("no registrado");
+        alertMessage('El Formato ingresado no es válido', 'form'); //se puede hacer varios if y que muestre el msj para cada campo mal ingresado.
+       
     }
 }
+
+const limpiarcampos = ()=>{
+    document.getElementById('UserNameRegistration').value="";
+    document.getElementById('EmailRegistration').value="";
+    document.getElementById('PasswordRegistration').value="";
+    document.getElementById('RepeatPasswordRegistration').value="";
+
+}
+
 const validateFieldsRegister = (name, email, password, Repeatpassword) => {
     const nameOk = /^[a-zA-Z0-9]*$/.test(name);
     const emailOk = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);

@@ -2,7 +2,22 @@
 const userLogged = JSON.parse(localStorage.getItem('userInfo'));
 if(!userLogged){
   window.location.assign(window.location.origin + '/html/login.html')
+}else{
+  const loginNav = document.getElementsByClassName("loginNav");
+  loginNav[0].classList.add('d-none')
+
+  const registerNav = document.getElementsByClassName("registerNav");
+  registerNav[0].classList.add('d-none')
+ 
+  const logoutNav = document.getElementsByClassName("logoutNav")
+  logoutNav[0].classList.remove("d-none")
+
+  if (userLogged.admin) {
+      const adminNav = document.getElementsByClassName("adminNav");
+      adminNav[0].classList.remove('d-none')
+  }
 }
+
 
 let categories = JSON.parse(localStorage.getItem('categories'));
 let games = JSON.parse(localStorage.getItem('games'));
@@ -13,7 +28,10 @@ games.forEach(game=>{
     if(game.fav){
     const favGame = document.createElement('div');
     favGame.classList.add('carousel-item');
-    favGame.classList.add('active');
+    if(game.code==1){
+
+      favGame.classList.add('active');
+    }
     favGame.innerHTML = `
     <div class="card mb-3" style="max-width: 1800px">
               <div class="row g-0">
