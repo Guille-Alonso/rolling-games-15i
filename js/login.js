@@ -29,7 +29,7 @@ users = [
 
 const login = (e)=>{
     e.preventDefault(); 
-console.log(users);
+
     const email = document.getElementById('values-email').value;
     const password = document.getElementById('values-password').value;
     const userFound = users.find(user=>user.email===email);

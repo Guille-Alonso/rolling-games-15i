@@ -52,6 +52,10 @@ bottom: 10px;
   box-shadow: 2px 2px 15px red inset;
 }
 
+.anchoSliderHome{
+  width: 60vw;
+}
+
 @media(max-width: 900px) {
  .principal{
   margin-top: 15%;

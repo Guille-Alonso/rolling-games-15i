@@ -23,5 +23,5 @@ body {
     height: 100%;
 }
 #padreFooter{
-    height: 15vh;
+    height: 15vh !important;
 }

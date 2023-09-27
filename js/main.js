@@ -34,7 +34,7 @@ games.forEach(game=>{
     }
     favGame.innerHTML = `
     <div class="card mb-3" style="max-width: 1800px">
-              <div class="row g-0">
+              <div class="row g-0 anchoSliderHome">
                 <div class="col-md-4">
                   <img src=${game.image} class="img-fluid rounded-start imgFav" alt="..." />
                 </div>
@@ -100,7 +100,10 @@ categories.forEach(cat=>{
     </div>
     
     `
-    document.getElementById("juegosPorCategorias").appendChild(catGameRow);
+    const categoriesAndGames = games.filter(game=>game.category == cat.name && game.published)
+    if(categoriesAndGames.length > 0){
+      document.getElementById("juegosPorCategorias").appendChild(catGameRow);
+    }
   })
 
 
