@@ -134,7 +134,7 @@ select{
   }
 }
 
-@media(min-width: 768px) {
+/* @media(min-width: 768px) {
     main{
         height: 100%;
     }
@@ -145,8 +145,8 @@ select{
         height: 100%;
     }
 }
- 
-.footer {
+  */
+/* .footer {
     position: relative;
     width: 100%;
     background: #000000;
@@ -159,7 +159,7 @@ select{
     bottom: 0;
     margin-top: auto;
   }
-  
+   */
   .social-icon,
   .menu {
     position: relative;
@@ -223,7 +223,7 @@ select{
 
 
     
-@media(min-width: 768px){
+/* @media(min-width: 768px){
 body{
   height: 100% !important;
     }
@@ -256,4 +256,12 @@ body{
           margin-top: 25vh !important;
         }
       
+    } */
+
+    .layoutHeight{
+      min-height: 65vh;
+    }
+    
+    #padreFooter{
+      height: 30vh !important;
     }

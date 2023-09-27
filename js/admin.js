@@ -31,16 +31,16 @@ if(JSON.parse(localStorage.getItem('games'))){
 });
 }
 
-//! Adaptamos footer a la dinámica
-const body = document.querySelector('body')
-const footer = document.querySelector('footer')
-if(games.length < 2){
-  body.setAttribute('style','height: 80vh;')
-  footer.setAttribute('style','height: 45vh;')
-}else {
-  body.setAttribute('style','height: 100%;')
-  footer.setAttribute('style','height: none;')
-}
+// //! Adaptamos footer a la dinámica
+// const body = document.querySelector('body')
+// const footer = document.querySelector('footer')
+// if(games.length < 2){
+//   body.setAttribute('style','height: 80vh;')
+//   footer.setAttribute('style','height: 45vh;')
+// }else {
+//   body.setAttribute('style','height: 100%;')
+//   footer.setAttribute('style','height: none;')
+// }
 
 //* Traemos las categories de LS
 
@@ -85,7 +85,7 @@ games.forEach(game=>{
   <td class="text-center">
 
   <button class="btn" data-bs-toggle="modal" data-bs-target="#edit-modal" onclick="fillFields('${game.code}')">✏️</button>
-    <button class="btn" onclick="deleteGame('${game.code}')">🗑️</button>
+    <button class="btn" data-bs-toggle="modal" data-bs-target="#delete-game" onclick="deleteGame('${game.code}')">🗑️</button>
     <button class="btn" onclick="favsGame('${game.code}')">${favIcon}</button>
   </td>
   `
@@ -120,9 +120,16 @@ const addGame = (e)=>{
 //! cruD: Borrado de datos
 
 const deleteGame = (codeToRemove)=>{
+  const gameToRemove = games.find(game => game.code == codeToRemove)
+  const msgDeleteGame = document.getElementById('msgDeleteGame');
+  msgDeleteGame.innerHTML = `Are you sure you want to delete the <strong>${gameToRemove.name.toUpperCase()}</strong>?`
+
+  const botonModalDeleteGame = document.getElementById('deleteGame');
+  botonModalDeleteGame.addEventListener('click', function(event) {
   const gamesUpdated = games.filter(game=>game.code!=codeToRemove);
   localStorage.setItem('games',JSON.stringify(gamesUpdated));
   window.location.reload();
+});
 }
 
 //! crUd: Modificación de datos

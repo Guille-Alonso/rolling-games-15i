@@ -5,7 +5,7 @@ body{
 .principal{
   display: flex;
   justify-content: center;
-  margin-top: 8%;
+  margin-top: 7%;
 }
 
 .title-categorie{font-family: 'Stick No Bills', sans-serif;
@@ -54,6 +54,10 @@ bottom: 10px;
 
 .anchoSliderHome{
   width: 60vw;
+}
+
+.layoutHeight{
+  min-height: 55vh;
 }
 
 @media(max-width: 900px) {

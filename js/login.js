@@ -10,6 +10,25 @@ class User{
     }
 }
 
+class Game{
+    constructor(code, name, category,description, published, fav,image){
+      this.name = name;
+      this.code = code;
+      this.category = category;
+      this.description = description;
+      this.published = published;
+      this.fav = fav;
+      this.image = image;
+    }
+  }
+
+class Category{
+    constructor(id, name){
+      this.id = id;
+      this.name = name;
+    }
+  }
+
 let users ;
 
 if (localStorage.getItem('users')){
@@ -24,6 +43,25 @@ users = [
         new User (6,'Rosario', 25,'Rolli@gmail.com', '123456',true),
     ]
     localStorage.setItem("users", JSON.stringify(users))
+}
+
+//juegos hardcodeados
+if (localStorage.getItem('games')){
+    console.log("no");
+    let juegos = JSON.parse(localStorage.getItem('games'))
+} else{
+    console.log("si");
+    let cat = new Category (1,"gaming")
+    let cats=[]
+    cats.push(cat)
+    let juegos = [
+        new Game(1,"gta vice city",cat.name,"grand theft auto",true,true,"https://img.unocero.com/2021/08/grand-theft-auto-vice-city-2-descargar-1-1.jpg"),
+        new Game(2,"cs go",cat.name,"counter strike",true,false,"https://www.global-esports.news/wp-content/uploads/2022/04/Source-2-in-CSGO-%E2%80%93-Dataminer-1.png"),
+        new Game(3,"call of duthy",cat.name,"sice 1950",true,true,"https://i0.wp.com/imgs.hipertextual.com/wp-content/uploads/2022/01/call-of-duty.jpeg?fit=1920%2C1080&quality=50&strip=all&ssl=1"),
+      
+    ]
+    localStorage.setItem("games", JSON.stringify(juegos))
+    localStorage.setItem('categories',JSON.stringify(cats))
 }
 
 

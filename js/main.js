@@ -21,16 +21,17 @@ if(!userLogged){
 
 let categories = JSON.parse(localStorage.getItem('categories'));
 let games = JSON.parse(localStorage.getItem('games'));
-console.log(categories);
-console.log(games);
+
+let flagItemActive = true;
 
 games.forEach(game=>{
+
     if(game.fav){
     const favGame = document.createElement('div');
     favGame.classList.add('carousel-item');
-    if(game.code==1){
-
+    if(flagItemActive){
       favGame.classList.add('active');
+      flagItemActive=false;
     }
     favGame.innerHTML = `
     <div class="card mb-3" style="max-width: 1800px">

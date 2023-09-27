@@ -2,8 +2,12 @@ body{
     background-color: black;
 }
 
+.fuenteDetail{
+    font-family: 'Stick No Bills', sans-serif;
+}
+
 #game-container{
-    margin-top: 8% !important;
+    margin-top: 5% !important;
 }
 
 #padreFooter{
@@ -11,9 +15,9 @@ body{
 }
 
 .test-img{
-    height: 50vh;
+    height: 45vh;
     border-radius: 20px;
-    width: 30vw;
+    width: 28vw;
 }
 
 h1{
