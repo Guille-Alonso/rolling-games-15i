@@ -34,7 +34,7 @@ games.forEach(game=>{
       flagItemActive=false;
     }
     favGame.innerHTML = `
-    <div class="card mb-3" style="max-width: 1800px">
+    <div class="card mb-3">
               <div class="row g-0 anchoSliderHome">
                 <div class="col-md-4">
                   <img src=${game.image} class="img-fluid rounded-start imgFav" alt="..." />
@@ -63,7 +63,7 @@ categories.forEach(cat=>{
     const catGameRow = document.createElement('div');
     catGameRow.classList.add('row');
     catGameRow.innerHTML= `
-    <h1 class="title-categorie text-center my-5" style="color: red;">${cat.name}</h1>
+    <h1 class="title-categorie text-center my-4 my-md-5" style="color: red;">${cat.name}</h1>
     <div class="col">
         <div id="carousel${cat.id}" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">

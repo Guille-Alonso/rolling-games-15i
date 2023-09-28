@@ -62,7 +62,7 @@ bottom: 10px;
 
 @media(max-width: 900px) {
  .principal{
-  margin-top: 15%;
+  margin-top: 20%;
  }
 }
 
@@ -70,10 +70,22 @@ bottom: 10px;
   .imgCat{
     height: 130px;
   }
+  .anchoSliderHome{
+    width: 80vw;
+  }
+  .imgFav{
+    height: 350px;
+  }
 }
 @media(min-width: 900px){
   .imgCat{
     height: 300px;
+  }
+  .anchoSliderHome{
+    width: 60vw;
+  }
+  .imgFav{
+    height: 400px;
   }
 }
 
