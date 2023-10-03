@@ -37,10 +37,10 @@ if (localStorage.getItem('users')){
 users = [
         new User (1,'Florencia Gomez', 25,'FlorG15i@gmail.com', '123456',true),
         new User(2,'Stella',25,'stella@gmail.com','12345678',true),
-        new User(3,'Guille',25,'guilleplate@gmail.com','123456',false),
+        new User(3,'Guille',25,'guilleplate@gmail.com','123456',true),
         new User(4,'Nicolas Pereira',26,'nico@gmail.com','123456',true),
         new User(5,'Favio',25,'fav10@gmail.com','123456',true),
-        new User (6,'Rosario', 25,'Rolli@gmail.com', '123456',true),
+        new User (6,'Rosario', 25,'Rolli@gmail.com', '123456',false),
     ]
     localStorage.setItem("users", JSON.stringify(users))
 }
@@ -57,7 +57,7 @@ if (localStorage.getItem('games')){
     let juegos = [
         new Game(1,"gta vice city",cat.name,"grand theft auto",true,true,"https://img.unocero.com/2021/08/grand-theft-auto-vice-city-2-descargar-1-1.jpg"),
         new Game(2,"cs go",cat.name,"counter strike",true,false,"https://www.global-esports.news/wp-content/uploads/2022/04/Source-2-in-CSGO-%E2%80%93-Dataminer-1.png"),
-        new Game(3,"call of duthy",cat.name,"sice 1950",true,true,"https://i0.wp.com/imgs.hipertextual.com/wp-content/uploads/2022/01/call-of-duty.jpeg?fit=1920%2C1080&quality=50&strip=all&ssl=1"),
+        new Game(3,"call of duthy",cat.name,"since 1950",true,true,"https://i0.wp.com/imgs.hipertextual.com/wp-content/uploads/2022/01/call-of-duty.jpeg?fit=1920%2C1080&quality=50&strip=all&ssl=1"),
       
     ]
     localStorage.setItem("games", JSON.stringify(juegos))
